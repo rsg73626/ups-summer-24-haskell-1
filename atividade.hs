@@ -1,6 +1,8 @@
 
 {- ATIVIDADES -}
-{- Renan Germano -}
+{- Renan Soares Germano -}
+{- Bruno Albuquerque Brito -}
+{- Michele Mathias -}
 
 {- 1. -}
 
