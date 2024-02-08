@@ -1,7 +1,3 @@
-{- ATIVIDADES 2 -}
-{- Renan Soares Germano -}
-{- Bruno Albuquerque Brito -}
-{- Michele Mathias -}
 
 import Control.Monad
 
@@ -14,12 +10,15 @@ main = do
     b <- (readLn :: IO Int)
     putStrLn "c: "
     c <- (readLn :: IO Int)
-    return (Equation (fromIntegral a) (fromIntegral b) (fromIntegral c))
-    putStrLn $ equationToString (Equation (fromIntegral a) (fromIntegral b) (fromIntegral c))
-    putStrLn $ equationResultToString $ solveEquation (Equation (fromIntegral a) (fromIntegral b) (fromIntegral c))
+    putStrLn $ generateOutput (Equation (fromIntegral a) (fromIntegral b) (fromIntegral c))
 
 data Equation = Equation{ a :: Float, b :: Float, c :: Float }
 data EquationResult = Solution { x1 :: Float, x2 :: Float } | NoSolution { delta :: Float } 
+
+generateOutput :: Equation -> String
+generateOutput eq = (equationToString eq) ++ "\n" ++ (equationResultToString eqResult) ++ "\n" ++ (generateRealProof eq eqResult)
+    where
+        eqResult = solveEquation eq
 
 solveEquation :: Equation -> EquationResult
 solveEquation (Equation a b c)

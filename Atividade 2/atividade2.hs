@@ -113,3 +113,7 @@ mult234 x = return (2 * x)
 {- (c) Fac ̧a um programa que calcule uma equa ̧c ̃ao do segundo grau, a partir dos dados digitados pelo usu ́ario. -}
 
 {- RESPOSTA: arquivo atividade2_3c.hs -}
+
+{- (d) -}
+
+{- RESPOSTA: arquivo atividade2_3d.hs -}
